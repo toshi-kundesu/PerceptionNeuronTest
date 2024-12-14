@@ -1089,7 +1089,7 @@ MonoBehaviour:
   address: 127.0.0.1
   portTcp: 7003
   portUdpServer: 7003
-  portUdp: 7004
+  portUdp: 7001
   socketType: 0
   skeletonType: 0
   connectToAxis: 1
