@@ -72,6 +72,6 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # Third party
-/ThirdParty/
-!ThirdParty.meta
-!/ThirdParty/**/*.meta
+/Assets/ThirdParty/
+!/Assets/ThirdParty.meta
+!/Assets/ThirdParty/**/*.meta
