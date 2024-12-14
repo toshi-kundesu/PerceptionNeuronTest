@@ -265,10 +265,10 @@ namespace Neuron
 							case UpdateMethod.MixedPhysical:
 								Vector3 velocityTarget2 = (src_transform.position - dest_transform.position) / Time.fixedDeltaTime;
 
-								Vector3 v = Vector3.MoveTowards(rigidbody.velocity, velocityTarget2, 10.0f);
+								Vector3 v = Vector3.MoveTowards(rigidbody.linearVelocity, velocityTarget2, 10.0f);
 								if( ValidateVector3( v ) )
 								{
-									rigidbody.velocity = v;
+									rigidbody.linearVelocity = v;
 								}
 
 								rigidbody.MoveRotation( src_transform.rotation );
@@ -284,11 +284,11 @@ namespace Neuron
 
 		void ApplyVelocity(Rigidbody rb, Vector3 velocityTarget, Vector3 angularTarget)
 		{
-            Vector3 v =  Vector3.MoveTowards(rb.velocity, velocityTarget, 100.0f);
+            Vector3 v =  Vector3.MoveTowards(rb.linearVelocity, velocityTarget, 100.0f);
 			if( ValidateVector3( v ) )
 			{
 
-                rb.velocity = v;
+                rb.linearVelocity = v;
 			}
 
             v =  Vector3.MoveTowards(rb.angularVelocity, angularTarget, 100.0f);
